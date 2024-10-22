@@ -115,11 +115,6 @@ public class GestionBdD {
                 st.executeUpdate("drop table partenaire");
             } catch (SQLException ex) {
             }
-            try {
-                
-            } catch (SQLException e) {
-                // TODO: handle exception
-            }
         }
     }
 
