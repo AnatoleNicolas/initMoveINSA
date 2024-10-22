@@ -65,6 +65,14 @@ public class GestionBdD {
                     + " nbrplaces int not null,\n"
                     + " proposepar int not null\n"
                     + ")");
+            st.executeUpdate(
+                    "create table etudiant ( \n"
+                    + ConnectionSimpleSGBD.sqlForGeneratedKeys(con, "id") + ",\n"
+                    + " mail varchar(50) not null unique\n"
+                    + " nom varchar(50) not null\n"
+                    + " prenom varchar(50) not null\n"
+                    + " score float"
+                    + ")");
             // création des liens
             st.executeUpdate(
                     """
@@ -106,6 +114,11 @@ public class GestionBdD {
             try {
                 st.executeUpdate("drop table partenaire");
             } catch (SQLException ex) {
+            }
+            try {
+                
+            } catch (SQLException e) {
+                // TODO: handle exception
             }
         }
     }

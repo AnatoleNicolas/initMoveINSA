@@ -52,9 +52,9 @@ public class ConnectionSimpleSGBD {
      *
      * @return
      */
-    public static Connection defaultCon() throws SQLException {
-//        return mysqlServeurPourM3();
-        return h2InMemory("test");
+    public static Connection defaultCon() throws SQLException {//permet de choisir si on veut travailler en mémoire/ligne
+        return mysqlServeurPourM3();
+//        return h2InMemory("test");
 //        return h2InFile("bdd");
     }
 
@@ -93,10 +93,10 @@ public class ConnectionSimpleSGBD {
      * @throws SQLException
      */
     public static Connection mysqlServeurPourM3() throws SQLException {
-        return connectMySQL("92.222.25.165", 3306,
-                "m3_fdebertranddeb01",
-                "m3_fdebertranddeb01",
-                "même pas en rève");
+        return connectMySQL("92.222.25.165", 3306,//92.222.25.165 et port :  3306
+                "m3_anicolas01",//m3_anicolas01
+                "m3_anicolas01",//m3_anicolas01
+                "f4ba46cc");//f4ba46cc
     }
 
     /**
